@@ -11,6 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140827195637) do
+
+  create_table "servants", force: true do |t|
+    t.string   "nick"
+    t.string   "name"
+    t.string   "rank"
+    t.date     "in_from"
+    t.integer  "year_of_birth"
+    t.integer  "gg"
+    t.boolean  "status"
+    t.string   "battle_tag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
