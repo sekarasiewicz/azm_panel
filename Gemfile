@@ -15,17 +15,25 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'devise', '~> 3.3.0'
+gem 'carrierwave'
+gem 'decent_exposure'
+gem 'simple_form'
+gem 'decent_decoration'
+gem 'draper'
+gem 'bootstrap-sass'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+group :development do
+  gem 'spring'
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development, :test do
+  gem 'pry'
+  gem 'factory_girl_rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+gem 'unicorn'
