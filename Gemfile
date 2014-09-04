@@ -22,6 +22,7 @@ gem 'simple_form'
 gem 'decent_decoration'
 gem 'draper'
 gem 'bootstrap-sass'
+gem 'haml'
 
 group :development do
   gem 'spring'
