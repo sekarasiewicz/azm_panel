@@ -1,13 +1,14 @@
 !!!
 %html
   %head
-    %title AzmPanel
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Azm Panel"
+    %meta{:content => content_for?(:description) ? yield(:description) : "Azm Panel", :name => "description"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    - if user_signed_in?
-      = link_to 'Log Out',destroy_user_session_path, method: :delete
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    %header= render 'layouts/navigation'
+    %main{:role => "main"}
+      = render 'layouts/messages'
+      = yield
