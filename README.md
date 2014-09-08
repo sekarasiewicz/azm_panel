@@ -1,6 +1,6 @@
 AzmPanel
 ========
 
-Administration panel for [azmklan]
+Administration panel for Diablo Klan [Słudzy Azmodana]
 
-[azmklan]: http://azmklan.org/
+[Słudzy Azmodana]: http://azmklan.org/
