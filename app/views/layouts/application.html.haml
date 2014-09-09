@@ -1,14 +1,14 @@
 !!!
 %html
   %head
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Azm Panel"
-    %meta{:content => content_for?(:description) ? yield(:description) : "Azm Panel", :name => "description"}/
+    %meta{content: 'width=device-width, initial-scale=1.0', name: 'viewport'}/
+    %title= content_for?(:title) ? yield(:title) : 'Azm Panel'
+    %meta{content: content_for?(:description) ? yield(:description) : 'Azm Panel', name: 'description'}/
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     %header= render 'layouts/navigation'
-    %main{:role => "main"}
+    %main{role: 'main'}
       = render 'layouts/messages'
       = yield
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
