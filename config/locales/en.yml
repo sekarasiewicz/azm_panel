@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  global:
+    log_out: Log out
+  pages:
+    servants:
+      servants: Servants
+      servant: Servant
+

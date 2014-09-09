@@ -1,46 +1,15 @@
-%nav.navbar.navbar-inverse.navbar-fixed-top
+.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
   .container
     .navbar-header
-      %button.navbar-toggle{'data-target' => '.navbar-collapse', 'data-toggle' => 'collapse', type: 'button'}
+      %button.navbar-toggle.collapsed{'data-target' => '.navbar-collapse', 'data-toggle' => 'collapse', type: 'button'}
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to AzmPanel, root_path, class: 'navbar-brand'
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav= render 'layouts/navigation_links'
-
-
-
--#.navbar-collapse.collapse
--#  %ul.nav.navbar-nav
--#    %li.active
--#      %a{:href => "#"} Home
--#    %li
--#      %a{:href => "#about"} About
--#    %li
--#      %a{:href => "#contact"} Contact
--#    %li.dropdown
--#      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
--#        Dropdown
--#        %span.caret
--#      %ul.dropdown-menu{:role => "menu"}
--#        %li
--#          %a{:href => "#"} Action
--#        %li
--#          %a{:href => "#"} Another action
--#        %li
--#          %a{:href => "#"} Something else here
--#        %li.divider
--#        %li.dropdown-header Nav header
--#        %li
--#          %a{:href => "#"} Separated link
--#        %li
--#          %a{:href => "#"} One more separated link
--#  %ul.nav.navbar-nav.navbar-right
--#    %li
--#      %a{:href => "../navbar/"} Default
--#    %li
--#      %a{:href => "../navbar-static-top/"} Static top
--#    %li.active
--#      %a{:href => "./"} Fixed top
+      %a.navbar-brand{:href => "#"} Project name
+    -if user_signed_in?
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          = render 'layouts/navigation_left'
+        %ul.navbar-form.navbar-right
+          = render 'layouts/navigation_right'
