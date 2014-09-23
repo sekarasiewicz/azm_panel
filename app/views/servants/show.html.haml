@@ -1,0 +1,53 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th{colspan: '2'}
+        = t('pages.servants.servant_details')
+  %tbody
+    %tr
+      %td
+        = t('pages.servants.nick')
+      %td
+        = servant.nick
+    %tr
+      %td
+        = t('pages.servants.rank')
+      %td
+        = servant.rank
+    %tr
+      %td
+        = t('pages.servants.name')
+      %td
+        = servant.name
+    %tr
+      %td
+        = t('pages.servants.how_long')
+      %td
+        = servant.in_from
+    %tr
+      %td
+        = t('pages.servants.year_of_birth')
+      %td
+        = servant.year_of_birth
+    %tr
+      %td
+        = t('pages.servants.gg')
+      %td
+        = servant.gg
+    %tr
+      %td
+        = t('pages.servants.status')
+      %td
+        = servant.status
+    %tr
+      %td
+        = t('pages.servants.battle_tag')
+      %td
+        = servant.battle_tag
+    %tr
+      %td{colspan: '2'}
+        = link_to t('pages.actions.edit'), edit_servant_path(servant), class: 'btn btn-primary'
+        = link_to t('pages.actions.delete'), servant_path(servant), method: :delete, class: 'btn btn-danger'
+= link_to t('global.back'), servants_path, class: 'btn'
+
+

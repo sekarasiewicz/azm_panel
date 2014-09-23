@@ -23,8 +23,27 @@ en:
   hello: "Hello world"
   global:
     log_out: Log out
+    back: Back
   pages:
+    tables:
+      no: No.
+    actions:
+      delete: Delete
+      edit: Edit
+      submit: Submit
+      update: Update
+      actions: Actions
     servants:
       servants: Servants
       servant: Servant
+      nick: Nick
+      name: Name
+      rank: Rank
+      how_long: How long in AZM
+      year_of_birth: Year of birth
+      gg: GG
+      status: Status
+      battle_tag: BattleTag
+      add: Add servant
+      servant_details: Servant details
 

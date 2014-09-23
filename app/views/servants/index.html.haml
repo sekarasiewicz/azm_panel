@@ -1,1 +1,33 @@
-%h1 Servants Index
+= link_to t('pages.servants.add'), new_servant_path, class: 'btn btn-success'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        = t('pages.tables.no')
+      %th
+        = t('pages.servants.nick')
+      %th
+        = t('pages.servants.rank')
+      %th
+        = t('pages.servants.name')
+      %th
+        = t('pages.servants.battle_tag')
+      %th
+        = t('pages.actions.actions')
+  %tbody
+    - servants.each_with_index do |servant, index|
+      %tr
+        %td
+          = index + 1
+        %td
+          = link_to servant.nick, servant_path(servant)
+        %td
+          = servant.rank
+        %td
+          = servant.name
+        %td
+          = servant.battle_tag
+        %td
+          = link_to t('pages.actions.edit'), edit_servant_path(servant), class: 'btn btn-primary'
+          = link_to t('pages.actions.delete'), servant_path(servant), method: :delete, class: 'btn btn-danger'

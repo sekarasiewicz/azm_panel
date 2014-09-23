@@ -1,5 +1,4 @@
 class ServantsController < ApplicationController
-  def index
-
-  end
+  expose(:servants)
+  expose(:servant)
 end
