@@ -1,0 +1,12 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        = t('pages.servants.servant_details')
+  %tbody
+    = simple_form_for servant do |f|
+      = render partial: 'fields', locals: {f: f}
+      %tr
+        %td
+          = f.button :submit, class: 'btn btn-success'
+= link_to t('global.back'), servants_path, class: 'btn'
