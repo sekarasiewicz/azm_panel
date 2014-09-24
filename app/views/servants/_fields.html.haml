@@ -1,8 +1,8 @@
 = f.input :nick
 = f.input :rank
 = f.input :name
-= f.input :in_from
-= f.input :year_of_birth
+= f.input :in_from, as: :date_picker
+= f.input :year_of_birth, as: :date_picker
 = f.input :gg
 = f.input :battle_tag
-= f.input :status, wrapper: :inline_checkbox
+= f.input :status, as: :check_box
