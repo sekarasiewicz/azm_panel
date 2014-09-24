@@ -1,6 +1,7 @@
 $ ->
   $('.date').datetimepicker
-    format: "DD-MM-YYYY"
+    format: "YYYY-MM-DD"
+    viewMode: "days"
     pickTime: false
   $('.year').datetimepicker
     format: "YYYY"
