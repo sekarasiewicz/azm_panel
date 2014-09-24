@@ -19,6 +19,11 @@ class ServantsController < ApplicationController
     end
   end
 
+  def destroy
+    servant.destroy
+    redirect_to servants_path
+  end
+
   private
 
   def servant_params
