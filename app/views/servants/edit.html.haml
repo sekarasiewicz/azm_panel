@@ -3,5 +3,5 @@
   .panel-body
     = semantic_form_for servant do |f|
       = render 'fields', f: f
-      = f.button t('pages.actions.save'), class: 'btn btn-success'
+      = f.button t('pages.actions.update'), class: 'btn btn-warning'
 = link_to t('global.back'), servants_path, class: 'btn'

@@ -36,14 +36,14 @@
         = servant.gg
     %tr
       %td
-        = t('pages.servants.status')
-      %td
-        = servant.status
-    %tr
-      %td
         = t('pages.servants.battle_tag')
       %td
         = servant.battle_tag
+    %tr
+      %td
+        = t('pages.servants.status')
+      %td
+        = servant.status
     %tr
       %td{colspan: '2'}
         = link_to t('pages.actions.edit'), edit_servant_path(servant), class: 'btn btn-primary'
