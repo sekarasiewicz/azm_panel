@@ -20,6 +20,8 @@ gem 'decent_decoration', '0.0.6'
 gem 'draper', '1.3.1'
 gem 'bootstrap-sass', '3.2.0.2'
 gem 'haml', '4.0.5'
+gem 'momentjs-rails', '>= 2.8.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 
 group :development do
   gem 'spring', '1.1.3'
