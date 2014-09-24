@@ -1,7 +1,7 @@
 .panel.panel-primary
   .panel-heading= t('pages.servants.servant_details')
   .panel-body
-    = simple_form_for servant do |f|
+    = semantic_form_for servant do |f|
       = render 'fields', f: f
       = f.button :submit, class: 'btn btn-success'
 = link_to t('global.back'), servants_path, class: 'btn'
