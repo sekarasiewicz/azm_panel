@@ -20,23 +20,19 @@ class BaseInput
   end
 
   def form_group(&block)
-    template.content_tag(:div,
-                         template.capture(&block),
-                         class: 'form-group'
+    template.content_tag(:div, template.capture(&block), class: 'form-group'
     )
   end
 
   def input_group(&block)
-    template.content_tag(:div,
-                         template.capture(&block),
-                         class: 'input-group'
+    template.content_tag(:div, template.capture(&block), class: 'input-group'
     )
   end
 
   def html_options
     {
         class: 'form-control'
-    }.merge(custom_html_options){|key, first, second| first + ' ' + second }
+    }.merge(custom_html_options){|_, *values| values.join(' ') }
   end
 
   def custom_html_options
