@@ -23,7 +23,7 @@ gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 
 gem 'formtastic', '3.0.0'
-
+gem 'mini_magick'
 
 group :development do
   gem 'spring', '1.1.3'

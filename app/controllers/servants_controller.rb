@@ -1,11 +1,11 @@
 class ServantsController < ApplicationController
-  expose(:servants)
+  expose(:servants) { Servant.includes(:rank).order('name ASC, status ASC, rank.level ASC') }
   expose(:servant, attributes: :servant_params)
   expose(:status_type) { Servant::STATUS_TYPE }
 
   def create
     if servant.save
-      redirect_to(servant)
+      redirect_to servants_path
     else
       render :new
     end

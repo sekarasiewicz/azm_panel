@@ -6,6 +6,11 @@
   %tbody
     %tr
       %td
+        = t('pages.servants.avatar')
+      %td
+        = image_tag(servant.avatar_url) if servant.avatar?
+    %tr
+      %td
         = t('pages.servants.nick')
       %td
         = servant.nick

@@ -1,3 +1,6 @@
+= f.input :avatar
+= image_tag(servant.avatar_url, class: 'img-thumbnail') if servant.avatar?
+= f.hidden_field :avatar_cache
 = f.input :nick
 = f.input :rank, prompt: t('pages.servants.select_rank')
 = f.input :name
