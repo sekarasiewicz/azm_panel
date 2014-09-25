@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924110650) do
+ActiveRecord::Schema.define(version: 20140925174621) do
 
   create_table "rank", force: true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140924110650) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "rank_id"
+    t.string   "avatar"
   end
 
   create_table "users", force: true do |t|
