@@ -5,4 +5,8 @@ class Servant < ActiveRecord::Base
   belongs_to :rank
 
   validates :nick, presence: true
+
+  def self.ordered
+    joins(:rank).order('rank.level ASC, status DESC, name ASC')
+  end
 end
