@@ -14,6 +14,8 @@
       %th
         = t('pages.servants.battle_tag')
       %th
+        = t('pages.servants.status')
+      %th
         = t('pages.actions.actions')
   %tbody
     - servants.each_with_index do |servant, index|
@@ -28,6 +30,8 @@
           = servant.name
         %td
           = servant.battle_tag
+        %td
+          = servant.status
         %td
           = link_to t('pages.actions.edit'), edit_servant_path(servant), class: 'btn btn-primary'
           = link_to t('pages.actions.delete'), servant_path(servant), method: :delete, class: 'btn btn-danger'
