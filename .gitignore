@@ -4,3 +4,4 @@
 .ruby-version
 config/database.yml
 log/*
+public/*
