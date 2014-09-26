@@ -1,5 +1,5 @@
 class ServantsController < ApplicationController
-  expose(:servants) { Servant.joins(:rank).group('rank.level, nick').order('rank.level ASC, status DESC, name ASC') }
+  expose(:servants) { Servant.joins(:rank).order('rank.level ASC, status DESC, name ASC') }
   expose(:servant, attributes: :servant_params)
   expose(:status_type) { Servant::STATUS_TYPE }
 
