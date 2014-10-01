@@ -4,7 +4,7 @@ class Servant < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   belongs_to :rank
 
-  validates :nick, presence: true
+  validates :nick, :rank_id, presence: true
 
   def self.ordered
     joins(:rank).order('rank.level ASC, status DESC, name ASC')
