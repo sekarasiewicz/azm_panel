@@ -1,6 +1,7 @@
 root = '/var/www/azm_panel/current'
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
+listen "#{root}/tmp/unicorn.azm_panel.sock"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
