@@ -5,7 +5,7 @@ set :application, 'azm_panel'
 set :repo_url, 'git@github.com:sekarasiewicz/azm_panel.git'
 set :scm, :git
 set :rails_env, 'production'
-set :rvm_type, :system
+# set :rvm_type, :system
 set :rvm_ruby_version, '2.1.2'
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 # Default value for :linked_files is []
