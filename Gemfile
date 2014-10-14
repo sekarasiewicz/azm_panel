@@ -32,6 +32,7 @@ group :development do
   gem 'quiet_assets', '1.0.3'
   gem 'rails_layout', '1.0.21'
   gem 'capistrano',  '~> 3.1'
+  gem 'capistrano-rvm'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler', '~> 1.1.3'
   gem 'net-ssh', '~> 2.9.1'
