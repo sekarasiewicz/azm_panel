@@ -21,24 +21,18 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :keep_releases, 5
 
 namespace :deploy do
-
   desc 'Restart application'
   task :restart do
+    # Reload unicorn with capistrano3-unicorn hook
+    # needs to be before "on roles()"
+    invoke 'unicorn:reload'
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
-  after :publishing, :restart
-
-  # after :restart, :clear_cache do
-  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
-  #     # Here we can do anything such as:
-  #     # within release_path do
-  #     #   execute :rake, 'cache:clear'
-  #     # end
-  #   end
-  # end
   after :finishing, 'deploy:cleanup'
+  before :finishing, 'deploy:restart'
+
+  after 'deploy:rollback', 'deploy:restart'
 end
