@@ -37,6 +37,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler', '~> 1.1.3'
+  gem 'dotenv-deployment'
   gem 'net-ssh', '~> 2.9.1'
 end
 
