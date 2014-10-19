@@ -23,7 +23,6 @@ gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 gem 'unicorn', '4.8.3'
 gem 'unicorn-rails'
-gem 'capistrano3-unicorn'
 
 gem 'formtastic', '3.0.0'
 gem 'mini_magick', '3.8.1'
@@ -37,6 +36,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler', '~> 1.1.3'
+  gem 'capistrano3-unicorn'
   gem 'dotenv-deployment'
   gem 'net-ssh', '~> 2.9.1'
 end
