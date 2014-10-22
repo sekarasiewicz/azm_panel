@@ -7,6 +7,6 @@ class Servant < ActiveRecord::Base
   validates :nick, :rank, presence: true
 
   def self.ordered
-    joins(:rank).order('rank.level ASC, status DESC, name ASC')
+    joins(:rank).order('rank.level ASC, servants.status DESC, servants.name ASC')
   end
 end
