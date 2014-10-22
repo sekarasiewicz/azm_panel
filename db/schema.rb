@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20141022131504) do
     t.string   "avatar"
   end
 
+  add_index "servants", ["rank_id"], name: "index_servants_on_rank_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
