@@ -21,8 +21,6 @@ gem 'bootstrap-sass', '3.2.0.2'
 gem 'haml', '4.0.5'
 gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
-gem 'unicorn', '4.8.3'
-gem 'unicorn-rails'
 
 gem 'formtastic', '3.0.0'
 gem 'mini_magick', '3.8.1'
@@ -39,6 +37,12 @@ group :development do
   gem 'capistrano3-unicorn'
   gem 'net-ssh', '~> 2.9.1'
 end
+
+group :production do
+  gem 'unicorn', '4.8.3'
+  gem 'unicorn-rails'
+end
+
 
 group :development, :test do
   gem 'pry', '0.10.1'
