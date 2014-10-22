@@ -1,2 +1,4 @@
-%li.active
+%li{ class: ('active' if current_page?(servants_path)) }
   =link_to t('pages.servants.servants'), servants_path
+%li{ class: ('active' if current_page?(rank_index_path)) }
+  =link_to t('pages.rank.rank' ), rank_index_path

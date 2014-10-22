@@ -1,0 +1,33 @@
+= link_to t('pages.rank.add'), new_rank_path, class: 'btn btn-success'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        = t('pages.tables.no')
+      %th
+        = t('pages.tables.name')
+      %th
+        = t('pages.rank.short_name')
+      %th
+        = t('pages.rank.level')
+      %th
+        = t('pages.rank.header_color')
+      %th
+        = t('pages.actions.actions')
+  %tbody
+    - rank.each_with_index do |rank, index|
+      %tr
+        %td
+          = index + 1
+        %td
+          = link_to rank.name, rank_path(rank)
+        %td
+          = rank.short_name
+        %td
+          = rank.level
+        %td
+          = rank.header_color
+        %td
+          = link_to t('pages.actions.edit'), edit_rank_path(rank), class: 'btn btn-primary'
+          = link_to t('pages.actions.delete'), rank_path(rank), method: :delete, class: 'btn btn-danger'

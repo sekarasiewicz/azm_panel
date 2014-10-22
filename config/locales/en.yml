@@ -27,6 +27,7 @@ en:
   pages:
     tables:
       no: No.
+      name: Name
     actions:
       delete: Delete
       edit: Edit
@@ -38,7 +39,6 @@ en:
       servants: Servants
       servant: Servant
       nick: Nick
-      name: Name
       rank: Rank
       how_long: How long in AZM
       year_of_birth: Year of birth
@@ -49,4 +49,9 @@ en:
       servant_details: Servant details
       select_rank: Select Rank
       avatar: Avatar
-
+    rank:
+      rank: Rank
+      add: Add rank
+      short_name: Short name
+      level: Level
+      header_color: Header color
