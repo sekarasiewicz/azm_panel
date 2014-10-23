@@ -10,6 +10,19 @@ class RankController < ApplicationController
     end
   end
 
+  def update
+    if rank.save
+      redirect_to_index
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    rank.destroy
+    redirect_to_index
+  end
+
   private
 
   def rank_params
