@@ -20,7 +20,10 @@ class BaseInput
   end
 
   def form_group(&block)
-    template.content_tag(:div, template.capture(&block), class: 'form-group')
+    template.content_tag(:div,
+                         [template.capture(&block), hint_html].join("\n").html_safe,
+                         wrapper_html_options
+    )
   end
 
   def input_group(&block)
@@ -35,5 +38,17 @@ class BaseInput
 
   def custom_html_options
     options[:input_html] || {}
+  end
+
+  def wrapper_classes
+    classes = wrapper_classes_raw
+    classes << as
+    classes << 'form-group'
+    classes << 'has-error' if errors?
+    classes << 'optional' if optional?
+    classes << 'required' if required?
+    classes << 'autofocus' if autofocus?
+
+    classes.join(' ')
   end
 end
