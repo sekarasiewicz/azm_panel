@@ -1,3 +1,4 @@
 class RankController < ApplicationController
-  expose(:rank) { Rank.all }
+  expose(:rank_all) { Rank.all }
+  expose(:rank, ancestor: :rank_all)
 end
