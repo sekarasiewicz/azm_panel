@@ -1,0 +1,7 @@
+.panel.panel-primary
+  .panel-heading= t('pages.rank.rank_details')
+  .panel-body
+    = semantic_form_for rank do |f|
+      = render 'fields', f: f
+      = f.button t('pages.actions.save'), class: 'btn btn-success'
+= link_to t('global.back'), servants_path, class: 'btn'
