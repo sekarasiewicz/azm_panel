@@ -1,3 +1,6 @@
+-if rank.errors.size > 0
+  .alert.alert-danger
+    = f.semantic_errors :name, :level
 = f.input :name
 = f.input :short_name
 = f.input :level
