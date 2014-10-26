@@ -7,7 +7,7 @@ set :scm, :git
 set :rails_env, 'production'
 # set :rvm_type, :system
 set :rvm_ruby_version, '2.1.3@azm_panel'
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 # Default value for :linked_files is []
 set :linked_files, %w{config/database.yml config/secrets.yml .ruby-gemset .ruby-version}
 
