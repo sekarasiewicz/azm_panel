@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022131504) do
+ActiveRecord::Schema.define(version: 20150501131642) do
 
   create_table "rank", force: true do |t|
     t.string   "name"
@@ -27,13 +27,13 @@ ActiveRecord::Schema.define(version: 20141022131504) do
     t.string   "name"
     t.date     "in_from"
     t.integer  "year_of_birth"
-    t.integer  "gg"
     t.boolean  "status"
     t.string   "battle_tag"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "rank_id"
     t.string   "avatar"
+    t.string   "city"
   end
 
   add_index "servants", ["rank_id"], name: "index_servants_on_rank_id", using: :btree

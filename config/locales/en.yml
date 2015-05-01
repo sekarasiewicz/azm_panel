@@ -36,13 +36,14 @@ en:
       save: Save
       actions: Actions
     servants:
+      name: Name
       servants: Servants
       servant: Servant
       nick: Nick
       rank: Rank
       how_long: How long in AZM
       year_of_birth: Year of birth
-      gg: GG
+      city: City
       status: Status
       battle_tag: BattleTag
       add: Add servant
